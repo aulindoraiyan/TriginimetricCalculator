@@ -20,7 +20,10 @@ public class trigonometricCalculator {
 
         answer = Sine(P, H);
         System.out.println("The value of Sine is: " + answer);
-
+        
+        System.out.println("And the angle between them is: " + Math.toDegrees(Math.asin(answer)));
+        System.out.println("The other angle in the triangle will be: " + (90 - Math.toDegrees(Math.asin(answer))));
+        
         answer = Cosine(B, H);
         System.out.println("The value of Cosine is: " + answer);
 
