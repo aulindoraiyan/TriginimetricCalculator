@@ -17,12 +17,20 @@ public class trigonometricCalculator {
 
         System.out.println("Enter the value of Adjacent Side: ");
         B = keyboard.nextInt();
+        
+        double P1, B2, H3;
+        P1 = B;   // here to find the other angle, we are gonna use P1 and P2
+        B2 = P;
+        H3 = H;
 
         answer = Sine(P, H);
         System.out.println("The value of Sine is: " + answer);
         
         System.out.println("And the angle between them is: " + Math.toDegrees(Math.asin(answer)));
         System.out.println("The other angle in the triangle will be: " + (90 - Math.toDegrees(Math.asin(answer))));
+        
+        answer = otherAngle(P1, B2);
+        System.out.println("The other angle will be: " + Math.toDegrees(Math.atan(answer)));
         
         answer = Cosine(B, H);
         System.out.println("The value of Cosine is: " + answer);
